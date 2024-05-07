@@ -2,4 +2,32 @@
     <string name="app_name">PawsConnect</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome to Paws Connect!</string>
+    <string name="welcome_desc">Connect securely with potential foster parents through our app.</string>
+    <string name="skip">Skip</string>
+    <string name="continue_">Continue</string>
+    <string name="hi">Hi ! Let’s get you registered.</string>
+    <string name="please">Please provide the following details.</string>
+    <string name="you">You are a</string>
+    <string name="pet_owner">Pet Owner</string>
+    <string name="foster">Foster Parent</string>
+    <string name="select_pet">Select Pet</string>
+    <string name="select_breed">Select Breed</string>
+    <string name="cat">Cat</string>
+    <string name="british">British Shorthair</string>
+    <string name="pictures">Pictures</string>
+    <string name="vaccination">Vaccination</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ongoing">Ongoing Treatment</string>
+    <string name="personality_traits">Personality Traits</string>
+    <string name="calm">Calm</string>
+    <string name="playful">Playful</string>
+    <string name="aggressive">Aggressive</string>
+    <string name="behaviour">Behaviour</string>
+    <string name="well_trained">Well-trained</string>
+    <string name="curious">Curious</string>
+    <string name="loud">Loud</string>
+
+
 </resources>

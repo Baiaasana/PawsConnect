@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("androidx.navigation.safeargs")
-
+    id("kotlin-kapt")
 }
 
 android {
@@ -37,6 +37,8 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding =  true
+
     }
 }
 
@@ -52,5 +54,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
 
 }
