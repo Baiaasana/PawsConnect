@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    meow-->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main">#191919</color>
@@ -9,8 +10,14 @@
     <color name="grey_additional">#F0F0F0</color>
     <color name="blue_light">#F2F9FF</color>
     <color name="stroke_color">#D2D2D2</color>
+    <color name="grey_medium">#F3F3F3</color>
+    <color name="red_main">#EE5441</color>
+    <color name="red_light">#DF8579</color>
 
 
-
+    <!--    not meow-->
+    <color name="main_bg">#0A0171</color>
+    <color name="green">#2BC990</color>
+    <color name="color_trasparent">#00FFFFFF</color>
 
 </resources>

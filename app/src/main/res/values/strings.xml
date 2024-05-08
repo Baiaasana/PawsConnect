@@ -5,7 +5,8 @@
     <string name="welcome">Welcome to Paws Connect!</string>
     <string name="welcome_desc">Connect securely with potential foster parents through our app.</string>
     <string name="skip">Skip</string>
-    <string name="continue_">Continue</string>
+    <string name="registration">Sign up</string>
+    <string name="auth">Sign In</string>
     <string name="hi">Hi ! Let’s get you registered.</string>
     <string name="please">Please provide the following details.</string>
     <string name="you">You are a</string>
@@ -28,6 +29,22 @@
     <string name="well_trained">Well-trained</string>
     <string name="curious">Curious</string>
     <string name="loud">Loud</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="welcome_back_desc">Please Log into your existing account</string>
+    <string name="your_email">Your Email</string>
+    <string name="your_password">Your Password</string>
+    <string name="log_in">Log in</string>
+    <string name="text_with_bullet">Years old \u2022</string>
+    <string name="message_owner">Message Owner</string>
+    <string name="apply_to_foster">Apply to Foster</string>
+    <string name="alex_connors">Alex Connors</string>
+    <string name="foster_parent">Foster Parent</string>
+    <string name="_7">7</string>
+    <string name="cats">Cats</string>
+    <string name="species">Species</string>
+    <string name="size">Size</string>
+    <string name="location">Location</string>
+    <string name="age">Age</string>
 
 
 </resources>

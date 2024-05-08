@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pawsconnect.R
 import com.example.pawsconnect.adapters.ImageAdapter
-import com.example.pawsconnect.adapters.ImageItem
+import com.example.pawsconnect.data.ImageItem
 import com.example.pawsconnect.databinding.FragmentRegistrationBinding
 import com.example.pawsconnect.util.ItemDecorator
 
@@ -31,7 +31,7 @@ class RegistrationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = this
         setUpRecycler()
-        binding.rvImages.addItemDecoration(ItemDecorator(16))
+        binding.rvImages.addItemDecoration(ItemDecorator(16, false))
     }
 
     private fun setUpRecycler() {

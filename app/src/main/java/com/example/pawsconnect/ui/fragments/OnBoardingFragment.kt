@@ -29,8 +29,9 @@ class OnBoardingFragment : Fragment() {
     }
 
     private fun listeners()  = with(binding){
-        btnContinue.setOnClickListener { findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToRegistrationFragment()) }
+        btnRegister.setOnClickListener { findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToRegistrationFragment()) }
         btnSkip.setOnClickListener { findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToHomeFragment()) }
+        btnAuth.setOnClickListener { findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToAuthfragment()) }
     }
 
 

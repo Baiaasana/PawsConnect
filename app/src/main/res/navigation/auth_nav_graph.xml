@@ -21,10 +21,18 @@
         <action
             android:id="@+id/action_onBoardingFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_authfragment"
+            app:destination="@id/authfragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.example.pawsconnect.ui.fragments.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/authfragment"
+        android:name="com.example.pawsconnect.ui.fragments.AuthFragment"
+        android:label="fragment_authfragment"
+        tools:layout="@layout/fragment_authfragment" />
 </navigation>

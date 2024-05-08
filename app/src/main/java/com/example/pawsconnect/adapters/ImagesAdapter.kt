@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pawsconnect.R
+import com.example.pawsconnect.data.ImageItem
 import com.example.pawsconnect.databinding.ImageItemBinding
 
 class ImageAdapter : ListAdapter<ImageItem, RecyclerView.ViewHolder>(DiffCallback) {
@@ -92,7 +93,4 @@ class ImageAdapter : ListAdapter<ImageItem, RecyclerView.ViewHolder>(DiffCallbac
         }
     }
 }
-
-
-data class ImageItem(val id: Int, val image: Int, var isPlus: Boolean? = false)
 

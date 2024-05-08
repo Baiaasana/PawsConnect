@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/home_icon"
+        android:title="Home" />
+
+    <item
+        android:icon="@drawable/search_icon"
+        android:iconTint="@color/blue"
+        android:id="@id/homeFragment"
+        android:checked="true"
+        android:title="Explore" />
+
+    <item
+        android:icon="@drawable/message_icon"
+        android:title="Message" />
+
+    <item
+        android:icon="@drawable/settings_icon"
+        android:title="Setting" />
+
+</menu>

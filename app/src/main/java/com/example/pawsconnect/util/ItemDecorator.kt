@@ -5,7 +5,7 @@ import android.util.TypedValue
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class ItemDecorator(private val margin: Int) : RecyclerView.ItemDecoration() {
+class ItemDecorator(private val margin: Int, val vertical :Boolean?  =true) : RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
         outRect: Rect,
@@ -24,8 +24,15 @@ class ItemDecorator(private val margin: Int) : RecyclerView.ItemDecoration() {
             parent.resources.displayMetrics
         ).toInt()
 
-        if (itemPosition != parent.adapter!!.itemCount - 1) {
-            outRect.right = rightMarginPx
+        if(vertical == true){
+            if (itemPosition != parent.adapter!!.itemCount - 1) {
+                outRect.bottom = rightMarginPx
+            }
+        }
+        else{
+            if (itemPosition != parent.adapter!!.itemCount - 1) {
+                outRect.right = rightMarginPx
+            }
         }
     }
 }
