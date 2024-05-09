@@ -7,6 +7,7 @@
 
     <style name="Theme.PawsConnect" parent="Base.Theme.PawsConnect" />
 
+
     <style name="AppSearchView" parent="Widget.AppCompat.SearchView">
         <item name="android:editTextColor">@color/additional</item>
         <item name="android:textColor">@color/main</item>

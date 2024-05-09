@@ -2,22 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:enabled="false"
         android:icon="@drawable/home_icon"
-        android:title="Home" />
+        android:title="@string/home" />
 
     <item
+        android:id="@id/exploreFragment"
         android:icon="@drawable/search_icon"
-        android:iconTint="@color/blue"
-        android:id="@id/homeFragment"
-        android:checked="true"
-        android:title="Explore" />
+        android:title="@string/explore" />
 
     <item
+        android:enabled="false"
         android:icon="@drawable/message_icon"
-        android:title="Message" />
+        android:title="@string/message" />
 
     <item
+        android:enabled="false"
         android:icon="@drawable/settings_icon"
-        android:title="Setting" />
+        android:title="@string/setting" />
 
 </menu>

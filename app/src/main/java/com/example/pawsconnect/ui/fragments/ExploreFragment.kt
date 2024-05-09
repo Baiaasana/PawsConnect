@@ -4,23 +4,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.bumptech.glide.request.RequestOptions
 import com.example.pawsconnect.R
-import com.example.pawsconnect.adapters.ImageAdapter
 import com.example.pawsconnect.adapters.PetsAdapter
 import com.example.pawsconnect.data.Pet
-import com.example.pawsconnect.databinding.FragmentHomeBinding
+import com.example.pawsconnect.databinding.ExploreFragmentBinding
 import com.example.pawsconnect.util.ItemDecorator
+import com.example.pawsconnect.util.hideKeyboard
 
 
-class HomeFragment : Fragment() {
+class ExploreFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: ExploreFragmentBinding? = null
     private val binding get() = _binding!!
 
     private val petsAdapter by lazy { PetsAdapter() }
@@ -28,8 +27,8 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+    ): View {
+        _binding = ExploreFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -37,7 +36,17 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setUpRecycler()
         loadProfileImage()
+        binding.filterCats.isSelected = true
+        listeners()
+    }
 
+    private fun listeners() {
+        binding.root.setOnClickListener {
+            binding.searchView.apply {
+                clearFocus()
+                hideKeyboard()
+            }
+        }
     }
 
     private fun loadProfileImage() {
@@ -112,7 +121,6 @@ class HomeFragment : Fragment() {
         }
         petsAdapter.submitList(lists)
         binding.rvPets.addItemDecoration(ItemDecorator(16, vertical = true))
-
     }
 }
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,316 +7,207 @@
     android:background="@drawable/option_bg"
     android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPet"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/rectangle_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/nunito_semibold"
+        android:gravity="center_vertical"
+        android:textColor="@color/main"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvRating"
+        app:layout_constraintStart_toEndOf="@id/ivPet"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Miki" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivPet"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/rectangle_bg" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvName"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/nunito_semibold"
-                    android:gravity="center_vertical"
-                    android:textColor="@color/main"
-                    android:textSize="14sp"
-                    tools:text="Miki" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvRating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rating_bg"
-                    android:drawableEnd="@drawable/star"
-                    android:drawablePadding="2dp"
-                    android:fontFamily="@font/nunito_regular"
-                    android:paddingHorizontal="6dp"
-                    android:paddingVertical="4dp"
-                    tools:text="2.8"
-                    android:textColor="@color/main"
-                    android:textSize="10sp"
-                    tools:ignore="SmallSp" />
-
-            </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvSpecie"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_medium"
-                android:textColor="@color/additional"
-                android:textSize="12sp"
-                tools:text="metisi" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvAge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="4dp"
-                    android:fontFamily="@font/nunito_regular"
-                    android:textColor="@color/additional"
-                    android:textSize="12sp"
-                    app:fontFamily="@font/nunito_regular"
-                    tools:text="3" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:gravity="center"
-                    android:text="@string/text_with_bullet"
-                    android:textColor="@color/additional"
-                    android:textSize="12sp"
-                    app:fontFamily="@font/nunito_regular" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/nunito_regular"
-                    android:textColor="@color/additional"
-                    android:textSize="12sp"
-                    app:fontFamily="@font/nunito_regular"
-                    tools:text="Chiatura" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivFavourite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/favourite_selector"
-            tools:src="@drawable/favourite_empty" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" />
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/rating_bg"
+        android:drawableEnd="@drawable/star"
+        android:drawablePadding="2dp"
+        android:fontFamily="@font/nunito_regular"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="4dp"
+        android:textColor="@color/main"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@id/ivFavourite"
+        app:layout_constraintTop_toTopOf="@id/tvName"
+        tools:ignore="SmallSp"
+        tools:text="2.8" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSpecie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/nunito_medium"
+        android:textColor="@color/additional"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivPet"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        tools:text="metisi" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/nunito_regular"
+        android:textColor="@color/additional"
+        android:textSize="12sp"
+        app:fontFamily="@font/nunito_regular"
+        app:layout_constraintStart_toEndOf="@id/ivPet"
+        app:layout_constraintTop_toBottomOf="@id/tvSpecie"
+        tools:text="3" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bullet"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:text="@string/text_with_bullet"
+        android:textColor="@color/additional"
+        android:textSize="12sp"
+        app:fontFamily="@font/nunito_regular"
+        app:layout_constraintStart_toEndOf="@id/tvAge"
+        app:layout_constraintTop_toTopOf="@id/tvAge" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/nunito_regular"
+        android:textColor="@color/additional"
+        android:textSize="12sp"
+        app:fontFamily="@font/nunito_regular"
+        app:layout_constraintStart_toEndOf="@id/bullet"
+        app:layout_constraintTop_toTopOf="@id/bullet"
+        tools:text="Chiatura" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/favourite_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/favourite_empty" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/attribute_1"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/attribute_bg"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/additional"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:fontFamily="@font/nunito_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPet"
+        tools:ignore="SmallSp"
+        tools:text="@string/registration" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/attribute_2"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/attribute_bg"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/additional"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:fontFamily="@font/nunito_regular"
+        app:layout_constraintBottom_toBottomOf="@id/attribute_1"
+        app:layout_constraintStart_toEndOf="@id/attribute_1"
+        app:layout_constraintTop_toTopOf="@id/attribute_1"
+        tools:ignore="SmallSp"
+        tools:text="@string/registration" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/attribute_3"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/attribute_bg"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/additional"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:fontFamily="@font/nunito_regular"
+        app:layout_constraintBottom_toBottomOf="@id/attribute_2"
+        app:layout_constraintStart_toEndOf="@id/attribute_2"
+        app:layout_constraintTop_toTopOf="@id/attribute_2"
+        tools:ignore="SmallSp"
+        tools:text="@string/registration" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/message_owner"
+        android:textColor="@color/blue"
+        android:textSize="14sp"
+        app:backgroundTint="@color/color_trasparent"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnApply"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llAttributes"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnApply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/apply_to_foster"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnContact"
+        app:layout_constraintTop_toBottomOf="@id/llAttributes" />
 
     <LinearLayout
+        android:id="@+id/llAttributes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnContact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/nunito_semibold"
-            android:text="@string/message_owner"
-            android:textColor="@color/blue"
-            android:textSize="14sp"
-            app:backgroundTint="@color/color_trasparent"
-            app:cornerRadius="8dp"
-            app:strokeColor="@color/blue"
-            app:strokeWidth="1dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnApply"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/nunito_semibold"
-            android:text="@string/apply_to_foster"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:backgroundTint="@color/blue"
-            app:cornerRadius="8dp" />
-
-    </LinearLayout>
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPet" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:background="@drawable/option_bg"-->
-<!--    android:orientation="vertical"-->
-<!--    android:padding="16dp">-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal">-->
-
-<!--        <androidx.appcompat.widget.AppCompatImageView-->
-<!--            android:id="@+id/ivPet"-->
-<!--            android:layout_width="64dp"-->
-<!--            android:layout_height="64dp"-->
-<!--            android:layout_marginEnd="12dp"-->
-<!--            android:background="@drawable/rectangle_bg" />-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginEnd="16dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content">-->
-
-<!--                <androidx.appcompat.widget.AppCompatTextView-->
-<!--                    android:id="@+id/tvName"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:fontFamily="@font/nunito_semibold"-->
-<!--                    android:gravity="center_vertical"-->
-<!--                    android:textColor="@color/main"-->
-<!--                    android:textSize="14sp"-->
-<!--                    tools:text="Miki" />-->
-
-<!--                <androidx.appcompat.widget.AppCompatTextView-->
-<!--                    android:id="@+id/tvRating"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:background="@drawable/rating_bg"-->
-<!--                    android:drawableEnd="@drawable/star"-->
-<!--                    android:drawablePadding="2dp"-->
-<!--                    android:fontFamily="@font/nunito_regular"-->
-<!--                    android:paddingHorizontal="6dp"-->
-<!--                    android:paddingVertical="4dp"-->
-<!--                    tools:text="2.8"-->
-<!--                    android:textColor="@color/main"-->
-<!--                    android:textSize="10sp"-->
-<!--                    tools:ignore="SmallSp" />-->
-
-<!--            </LinearLayout>-->
-
-<!--            <androidx.appcompat.widget.AppCompatTextView-->
-<!--                android:id="@+id/tvSpecie"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/nunito_medium"-->
-<!--                android:textColor="@color/additional"-->
-<!--                android:textSize="12sp"-->
-<!--                tools:text="metisi" />-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <androidx.appcompat.widget.AppCompatTextView-->
-<!--                    android:id="@+id/tvAge"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginEnd="4dp"-->
-<!--                    android:fontFamily="@font/nunito_regular"-->
-<!--                    android:textColor="@color/additional"-->
-<!--                    android:textSize="12sp"-->
-<!--                    app:fontFamily="@font/nunito_regular"-->
-<!--                    tools:text="3" />-->
-
-<!--                <androidx.appcompat.widget.AppCompatTextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:layout_marginEnd="4dp"-->
-<!--                    android:gravity="center"-->
-<!--                    android:text="@string/text_with_bullet"-->
-<!--                    android:textColor="@color/additional"-->
-<!--                    android:textSize="12sp"-->
-<!--                    app:fontFamily="@font/nunito_regular" />-->
-
-<!--                <androidx.appcompat.widget.AppCompatTextView-->
-<!--                    android:id="@+id/tvLocation"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:fontFamily="@font/nunito_regular"-->
-<!--                    android:textColor="@color/additional"-->
-<!--                    android:textSize="12sp"-->
-<!--                    app:fontFamily="@font/nunito_regular"-->
-<!--                    tools:text="Chiatura" />-->
-
-<!--            </LinearLayout>-->
-
-<!--        </LinearLayout>-->
-
-<!--        <androidx.appcompat.widget.AppCompatImageView-->
-<!--            android:id="@+id/ivFavourite"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:src="@drawable/favourite_selector"-->
-<!--            tools:src="@drawable/favourite_empty" />-->
-
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal" />-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:orientation="horizontal">-->
-
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            android:id="@+id/btnContact"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginEnd="16dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:fontFamily="@font/nunito_semibold"-->
-<!--            android:text="@string/message_owner"-->
-<!--            android:textColor="@color/blue"-->
-<!--            android:textSize="14sp"-->
-<!--            app:backgroundTint="@color/color_trasparent"-->
-<!--            app:cornerRadius="8dp"-->
-<!--            app:strokeColor="@color/blue"-->
-<!--            app:strokeWidth="1dp" />-->
-
-<!--        <com.google.android.material.button.MaterialButton-->
-<!--            android:id="@+id/btnApply"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:fontFamily="@font/nunito_semibold"-->
-<!--            android:text="@string/apply_to_foster"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="14sp"-->
-<!--            app:backgroundTint="@color/blue"-->
-<!--            app:cornerRadius="8dp" />-->
-
-<!--    </LinearLayout>-->
-
-<!--</androidx.appcompat.widget.LinearLayoutCompat>-->

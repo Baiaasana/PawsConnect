@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pawsconnect.R
 import com.example.pawsconnect.adapters.ImageAdapter
@@ -22,7 +23,7 @@ class RegistrationFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentRegistrationBinding.inflate(getLayoutInflater())
         return binding.root
     }
@@ -31,7 +32,14 @@ class RegistrationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = this
         setUpRecycler()
+        listeners()
         binding.rvImages.addItemDecoration(ItemDecorator(16, false))
+    }
+
+    private fun listeners(){
+        binding.ivExit.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 
     private fun setUpRecycler() {

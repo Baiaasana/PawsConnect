@@ -1,22 +1,23 @@
 package com.example.pawsconnect.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.pawsconnect.databinding.FragmentAuthfragmentBinding
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.pawsconnect.databinding.FragmentAuthBinding
 
 class AuthFragment : Fragment() {
 
-    private var _binding: FragmentAuthfragmentBinding? = null
+    private var _binding: FragmentAuthBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentAuthfragmentBinding.inflate(inflater, container, false)
+    ): View {
+        _binding = FragmentAuthBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -25,10 +26,9 @@ class AuthFragment : Fragment() {
         listeners()
     }
 
-    private fun listeners()  = with(binding){
-
-
-         }
-
-
+    private fun listeners() {
+        binding.btnLogin.setOnClickListener {
+            findNavController().navigate(AuthFragmentDirections.actionAuthfragmentToMainFragment())
+        }
+    }
 }

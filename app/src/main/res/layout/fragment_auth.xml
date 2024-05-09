@@ -36,7 +36,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:fontFamily="@font/raleway_regular"
@@ -44,15 +44,17 @@
         android:text="@string/welcome_back_desc"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
-        tools:layout_editor_absoluteX="20dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/input_bg"
+        android:fontFamily="@font/raleway_regular"
         android:hint="@string/your_email"
         android:paddingHorizontal="20dp"
         android:paddingTop="19dp"
@@ -60,8 +62,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="14sp"
-        android:fontFamily="@font/raleway_regular"
-        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
 
@@ -69,33 +70,35 @@
         android:id="@+id/appCompatEditText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/input_bg"
+        android:fontFamily="@font/raleway_regular"
         android:hint="@string/your_password"
         android:paddingHorizontal="20dp"
         android:paddingTop="19dp"
         android:paddingBottom="23dp"
         android:textColor="@color/white"
-        android:fontFamily="@font/raleway_regular"
         android:textColorHint="@color/white"
-        android:layout_marginTop="16dp"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatEditText" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:id="@+id/btnLogin"
-        android:fontFamily="@font/relaway_bold"
         android:backgroundTint="@color/green"
-        android:text="@string/log_in"
-        app:cornerRadius="20dp"
+        android:fontFamily="@font/relaway_bold"
         android:paddingTop="17dp"
         android:paddingBottom="18dp"
-        android:textSize="20sp"
+        android:text="@string/log_in"
         android:textColor="@color/white"
+        android:textSize="20sp"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

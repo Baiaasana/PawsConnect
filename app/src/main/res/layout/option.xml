@@ -6,7 +6,7 @@
 
         <variable
             name="selected"
-            type="Boolean"/>
+            type="Boolean" />
 
         <variable
             name="option"
@@ -22,12 +22,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@{selected ? @drawable/option_bg_selected : @drawable/option_bg, default=@drawable/option_bg}"
+            android:fontFamily="@font/nunito_semibold"
             android:paddingHorizontal="16dp"
             android:paddingVertical="12dp"
-            android:textSize="14sp"
             android:text="@{option}"
             android:textColor="@{selected ? @color/blue : @color/main, default=@color/main}"
-            android:fontFamily="@font/nunito_semibold"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -1,13 +1,12 @@
 package com.example.pawsconnect.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.pawsconnect.R
-import com.example.pawsconnect.databinding.FragmentHomeBinding
 import com.example.pawsconnect.databinding.FragmentOnBoardingBinding
 
 class OnBoardingFragment : Fragment() {
@@ -18,8 +17,9 @@ class OnBoardingFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentOnBoardingBinding.inflate(inflater, container, false)
+        requireActivity().setTheme(R.style.Base_Theme_PawsConnect)
         return binding.root
     }
 
@@ -28,11 +28,10 @@ class OnBoardingFragment : Fragment() {
         listeners()
     }
 
-    private fun listeners()  = with(binding){
+    private fun listeners() = with(binding) {
         btnRegister.setOnClickListener { findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToRegistrationFragment()) }
-        btnSkip.setOnClickListener { findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToHomeFragment()) }
+        btnSkip.setOnClickListener { findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToMainFragment()) }
         btnAuth.setOnClickListener { findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToAuthfragment()) }
     }
-
 
 }

@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="16dp"
-    tools:context=".ui.fragments.HomeFragment">
+    android:paddingHorizontal="16dp"
+    android:id="@+id/content"
+    android:paddingTop="16dp"
+    tools:context=".ui.fragments.ExploreFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image"
@@ -45,7 +47,6 @@
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toBottomOf="@id/tvName" />
-
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -92,28 +93,29 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/nunito_bold"
-        android:text="Let’s find a pet for you. "
+        android:text="@string/let"
         android:textColor="@color/main"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/frameLayout" />
 
-    <androidx.appcompat.widget.SearchView
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/search_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/search_bg"
-        android:clickable="true"
-        android:focusable="true"
-        android:iconifiedByDefault="false"
-        android:queryHint="Search here..."
-        android:theme="@style/AppSearchView"
+        android:drawableStart="@drawable/search_icon"
+        android:drawablePadding="12sp"
+        android:fontFamily="@font/nunito_regular"
+        android:hint="@string/search_here"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/main"
+        android:textColorHint="@color/stroke_color"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFind"
-        app:queryBackground="@null"
-        app:searchHintIcon="@null"
-        app:searchIcon="@drawable/search_icon" />
+        app:layout_constraintTop_toBottomOf="@id/tvFind" />
 
     <HorizontalScrollView
         android:id="@+id/svCategories"
@@ -121,11 +123,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search_view">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
@@ -139,6 +142,7 @@
                 android:src="@drawable/filter" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/filterCats"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
