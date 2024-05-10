@@ -10,5 +10,10 @@
         android:name="com.example.pawsconnect.ui.fragments.ExploreFragment"
         android:label="fragment_home"
         tools:layout="@layout/explore_fragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.pawsconnect.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 
 </navigation>

@@ -5,7 +5,11 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.PawsConnect" parent="Base.Theme.PawsConnect" />
+    <style name="Theme.PawsConnect" parent="Base.Theme.PawsConnect" >
+
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
 
 
     <style name="AppSearchView" parent="Widget.AppCompat.SearchView">

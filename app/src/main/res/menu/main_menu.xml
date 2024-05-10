@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:enabled="false"
         android:icon="@drawable/home_icon"
+        android:id="@+id/homeFragment"
         android:title="@string/home" />
 
     <item
@@ -12,12 +12,10 @@
         android:title="@string/explore" />
 
     <item
-        android:enabled="false"
         android:icon="@drawable/message_icon"
         android:title="@string/message" />
 
     <item
-        android:enabled="false"
         android:icon="@drawable/settings_icon"
         android:title="@string/setting" />
 

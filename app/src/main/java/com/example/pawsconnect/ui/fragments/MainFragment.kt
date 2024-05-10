@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.pawsconnect.R
 import com.example.pawsconnect.databinding.FragmentMainBinding
+
 
 class MainFragment : Fragment() {
 
@@ -32,9 +32,15 @@ class MainFragment : Fragment() {
     private fun setupNavigation() {
 
         val navHostFragment =
-            this.childFragmentManager.findFragmentById(R.id.nav_host_fragment_main) as NavHostFragment
+            this.childFragmentManager.findFragmentById(com.example.pawsconnect.R.id.nav_host_fragment_main) as NavHostFragment
         val navController = navHostFragment.findNavController()
         binding.bottomNavigationView.setupWithNavController(navController)
+
+        binding.bottomNavigationView.setOnApplyWindowInsetsListener(null)
+//        binding.bottomNavigationView.setPadding(0,0,0,0)
+
+//        navView.itemIconTintList = null
+
 
     }
 }
