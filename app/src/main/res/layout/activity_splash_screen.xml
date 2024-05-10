@@ -5,8 +5,7 @@
     android:id="@+id/splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash_bg"
-    android:backgroundTint="#2786DB"
+    android:background="@color/blue"
     tools:context=".ui.SplashScreenActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
